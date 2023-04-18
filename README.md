@@ -1,13 +1,13 @@
 # OE_Cassandra_Practice
 
-##Prepare the dockerized Environment
+## Prepare the dockerized Environment
 
-Run Cassandra in the docker env
+Create a docker env and run Cassandra
 ```bash
 ./single-start
 ```
 
-start a single client
+Start a single client
 ``` bash
 ./single-cli
 ```
@@ -29,6 +29,15 @@ We are creating the datastore for the European Traffic Incidents Office. All inc
 
 Provide a list of incidents of a vehicle for a specific date range, sorted by incident's date and time (newest first).
 
+##
+
+*Hint: 
+
+```sql
+COPY incidents_by_vehicle (reg_nr, reg_country, driver_pid, driver_name, incident_time, incident_location, penality_points) 
+FROM 'incidents.csv';
+```
+
 * Filter by: Vehicle & incident timestamp
 * Sort by: incident timestamp
 
@@ -36,6 +45,13 @@ Provide a list of incidents of a vehicle for a specific date range, sorted by in
 ### By Driver
 
 Provide the same list for a driver (identified by Driver PID), sorted by vehicle, then by date and time (newest first).
+
+*Hint: 
+
+```sql
+COPY incidents_by_driver (reg_nr, reg_country, driver_pid, driver_name, incident_time, incident_location, penality_points) 
+FROM 'incidents.csv';
+```
 
 * Filter by: driver pid
 * Sort by: vehicle, incident timestamp (DESC)
