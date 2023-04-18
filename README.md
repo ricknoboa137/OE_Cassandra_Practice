@@ -1,8 +1,16 @@
 # OE_Cassandra_Practice
-##Prepare the dockerized Environment
-./single-start
-./single-cli
 
+##Prepare the dockerized Environment
+
+Run Cassandra in the docker env
+```bash
+./single-start
+```
+
+start a single client
+``` bash
+./single-cli
+```
 
 We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information
 
