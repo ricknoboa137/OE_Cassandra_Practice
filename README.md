@@ -2,6 +2,12 @@
 
 ## Prepare the dockerized Environment
 
+Give execution permission to the bash files
+```bash
+chmod +x single-start.sh
+chmod +x single-cli.sh
+```
+
 Create a docker env and run Cassandra
 ```bash
 ./single-start
