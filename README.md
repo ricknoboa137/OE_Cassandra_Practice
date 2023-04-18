@@ -10,12 +10,12 @@ chmod +x single-cli.sh
 
 Create a docker env and run Cassandra
 ```bash
-./single-start
+./single-start.sh
 ```
 
 Start a single client
 ``` bash
-./single-cli
+./single-cli.sh
 ```
 
 We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information
