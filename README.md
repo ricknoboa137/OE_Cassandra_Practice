@@ -39,7 +39,7 @@ USE lab;
 
 We are required to create the table acording each query 
 
-For this exercise we are going to use the data set ```bash posts.csv ```
+For this exercise we are going to use the data set ```posts.csv ```
 
 * The following query is needed:
 
@@ -70,6 +70,7 @@ WHERE userid = 'john doe'
 
 ```
 
+## Task N_2
 
 We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information
 

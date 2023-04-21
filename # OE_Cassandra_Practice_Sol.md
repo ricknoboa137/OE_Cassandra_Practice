@@ -1,4 +1,4 @@
-# OE_Cassandra_Practice
+# OE_Cassandra_Practice_Solution
 
 ## Prepare the dockerized Environment
 
@@ -39,7 +39,7 @@ USE lab;
 
 We are required to create the table acording each query 
 
-For this exercise we are going to use the data set ```bash posts.csv ```
+For this exercise we are going to use the data set ```posts.csv ```
 
 * The following query is needed:
 
@@ -100,9 +100,9 @@ SELECT * FROM posts WHERE userid = 'john doe' AND (blog_title, posted_at) IN (('
 SELECT * FROM posts WHERE userid = 'john doe' AND blog_title = 'John''s Blog' AND posted_at > '2012-01-01';
 ```
 
+## Task N_2
 
-
-We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information (You can check the atrubutes/fields in the csv)
+We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information (You can check the atrubutes/fields in the ```incidents.csv``` file)
 
 ## Fields
 * Registration country code
