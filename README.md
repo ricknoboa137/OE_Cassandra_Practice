@@ -18,6 +18,24 @@ Start a single client
 ./single-cli.sh
 ```
 
+Start CQL Shell from the container
+``` bash
+cqlsh
+```
+
+### Inside Cassandra
+
+create Keyspace for a slingle client
+``` sql
+CREATE KEYSPACE lab WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+```
+access the "lab" environment
+
+```sql
+USE lab;
+```
+
+
 We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information
 
 ## Fields
