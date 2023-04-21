@@ -35,10 +35,47 @@ access the "lab" environment
 USE lab;
 ```
 
+## Task N_1
+
+We are required to create the table acording each query 
+
+For this exercise we are going to use the data set ```bash posts.csv ```
+
+* The following query is needed:
+
+```sql
+SELECT entry_title, content 
+FROM posts 
+WHERE userid = 'john doe' AND blog_title='John''s Blog' 
+             AND posted_at >= '2012-01-01' AND posted_at < '2012-01-31';
+
+```
+* What should be the PRIMARY KEY?
+
+* Based on the previously created table. Is the following query allowed?
+
+```sql
+SELECT entry_title, content
+ FROM posts 
+WHERE userid = 'john doe' 
+             AND posted_at >= '2012-01-01' AND posted_at < '2012-01-31';
+```
+
+* Based on the previously created table. Is the following query allowed?
+
+```sql
+SELECT * FROM posts 
+WHERE userid = 'john doe' 
+         AND (blog_title, posted_at) > ('John''s Blog', '2012-01-01');
+
+```
+
 
 We are creating the datastore for the European Traffic Incidents Office. All incidents arrive with the following information
 
-## Fields
+#### Create tables according each query requirements
+
+### Fields
 * Registration country code
 * Registration number
 * Driver PID
@@ -47,7 +84,7 @@ We are creating the datastore for the European Traffic Incidents Office. All inc
 * Incident’s location
 * Penalty points (if any)
 
-## Queries
+### Queries
 
 ### By Vehicle
 
