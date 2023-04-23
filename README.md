@@ -8,6 +8,7 @@ Give execution permission to the bash files
 ```bash
 chmod +x single-start.sh
 chmod +x single-cli.sh
+chmod +x single-stop.sh
 ```
 
 Create a docker env and run Cassandra
@@ -57,12 +58,17 @@ We are required to create the table acording each query
 
 For this exercise we are going to use the data set ```posts.csv ```
 
+```sql
+COPY posts (userid, blog_title, posted_at, entry_title, content, category) 
+FROM 'incidents.csv';
+```
+
 * The following query is needed:
 
 ```sql
 SELECT entry_title, content 
 FROM posts 
-WHERE userid = 'john doe' AND blog_title='John''s Blog' 
+WHERE userid = 'john doe' AND blog_title='John's Blog' 
              AND posted_at >= '2012-01-01' AND posted_at < '2012-01-31';
 
 ```
@@ -82,7 +88,7 @@ WHERE userid = 'john doe'
 ```sql
 SELECT * FROM posts 
 WHERE userid = 'john doe' 
-         AND (blog_title, posted_at) > ('John''s Blog', '2012-01-01');
+         AND (blog_title, posted_at) > ('John's Blog', '2012-01-01');
 
 ```
 
