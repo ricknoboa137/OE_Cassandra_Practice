@@ -1,5 +1,7 @@
 # OE_Cassandra_Practice
 
+#### Download the github repository
+
 ## Prepare the dockerized Environment
 
 Give execution permission to the bash files
@@ -11,6 +13,20 @@ chmod +x single-cli.sh
 Create a docker env and run Cassandra
 ```bash
 ./single-start.sh
+```
+
+Copy the ``` .csv ``` files to the docker container
+
+``` bash
+docker cp posts.csv cassandra1:/
+```
+
+``` bash
+docker cp country_vaccinations.csv cassandra1:/
+```
+
+``` bash
+docker cp incidents.csv cassandra1:/
 ```
 
 Start a single client
